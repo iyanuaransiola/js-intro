@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simpla Javascript Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <section class="container">
+        <h1>A Simple Javascript Calculator</h1>
+        <div class="row">
+            <div class="col-md-5 mt-6">
+                <form action="#">
+                    <div class="form-group">
+                        <input type="number"placeholder="please enter first number" class="form-control" id="txtNum1">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" placeholder="Please enter second number" class="form-control" id="txtNum2" autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="button" value="Add" class="form-control btn btn-danger" id="addBtn">
+                        </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+  
+
+    <script>
+          // 1. Having ensured that all elements of interest have been properly labelled using the ID attribute... Select all elements of interest
+
+          let txtNum1 = document.getElementById ("txtNum1");
+          let txtNum2 = document.getElementById ("txtNum2");
+          let addBtn = document.getElementById("addBtn");
+
+        //   2. Bind addBtn command button to an EvntListener.
+
+        addBtn.addEventListener("click", calculate);
+
+        // 3. Define "calculate" event handler (function) 
+        function calculate() {
+            // Get user input in txtNum1
+            let num1 = parseInt(txtNum1.value);
+            let num2 = parseInt(txtNum2.value);
+
+            let result = num1 + num2;
+
+            document.write("The sum of the two numbers is " + result);
+
+            // console.log(typeof(addBtn));
+        }
+
+    </script>
+    
+</body>
+</html>

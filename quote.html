@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Escape Sequence Characters</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+</head>
+<body>
+    <section class="container">
+        <h1 class="mt-5">Working with Escape Sequence Characters</h1>
+        <button class="form-control btn btn-success mt-5" id="btn">Show Today's Quote!</button>
+    </section>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", showQuote);
+
+        function showQuote(){
+            alert("Benjamin Franklin once said \"An investment in knowledge pays the best interest!\"");
+        }
+
+
+    </script>
+</body>
+</html>
